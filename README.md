@@ -15,6 +15,6 @@ Features:
 
 
 ## How to build ISO
-'''shell
+```shell
 nix build github:wiltaylor/nix-iso#iso.x86_64-linux.i3
-'''
+```
