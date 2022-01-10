@@ -2,7 +2,7 @@
   description = "This flake has a number of nix ISO files that can be used to deploy nixos.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-21.11";
   };
 
   outputs = { self, nixpkgs }: let
@@ -27,7 +27,7 @@
     };
   in {
     iso = lib.withDefaultSystems (sys: {
-      i3 = (mkIso { system = sys; }).config.system.build.isoImage;
+      i3 = (mkIso { system = sys; cfg = { iso.wm = "i3"; }; }).config.system.build.isoImage;
     });
   };
 }
