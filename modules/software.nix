@@ -176,6 +176,7 @@ in {
     unrescueScript
     rescueScript
     setupDiskScript
+    ntfsprogs
   ];
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" "usb_storage" ];
