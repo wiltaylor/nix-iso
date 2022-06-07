@@ -26,6 +26,7 @@
       echo "rescue {device} - Mounts a encrypted system's drives using my btrfs layout."
       echo "unrescue - Umounts an encrypted system"
       echo "setupdisk {vm|crypt} {device} - Sets up a disk ready for nixos install (only use if you want my layout)."
+      echo "gpg-helper - Utility for use with my GPG workflow."
       echo ""
       EOF
 

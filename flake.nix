@@ -10,7 +10,7 @@
     lib = import ./lib;
     system = "x86_64-linux";
 
-    allPkgs = lib.mkPkgs { inherit nixpkgs; };
+    allPkgs = lib.mkPkgs { inherit nixpkgs; cfg = {allowUnfree = true;}; };
 
     mkIso = {system, cfg ? {}, ...}: nixpkgs.lib.nixosSystem {
       inherit system;
